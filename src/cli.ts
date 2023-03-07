@@ -7,7 +7,7 @@ import { copy, copyBin } from './index'
 const log = consola.withScope('fast-cpy')
 
 function printUsage() {
-	log.log(` 	fast-cpy 
+	console.log(` 	fast-cpy 
 	
 	Get the size of a folder by recursively iterating through all its sub(files && folders). Use go, so high-speed
 

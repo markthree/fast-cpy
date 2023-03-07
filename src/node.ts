@@ -37,7 +37,7 @@ export async function copy(src: string, dest: string) {
 		throw new Error(`src is not dir: ${src}`)
 	}
 
-	ensureDir(dest)
+	await ensureDir(dest)
 
 	const entrys = await readdir(src, {
 		withFileTypes: true

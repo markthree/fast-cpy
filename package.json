@@ -5,6 +5,9 @@
   "main": "./npm/index.cjs",
   "module": "./npm/index.mjs",
   "types": "./npm/index.d.ts",
+  "bin": {
+    "fast-cpy": "bin/cli.js"
+  },
   "files": [
     "npm",
     "dist"
@@ -42,6 +45,11 @@
     "url": "https://github.com/markthree"
   },
   "license": "MIT",
+  "dependencies": {
+    "consola": "^2.15.3",
+    "kolorist": "^1.7.0",
+    "mri": "^1.2.0"
+  },
   "devDependencies": {
     "@types/node": "^18.14.6",
     "bumpp": "^9.0.0",

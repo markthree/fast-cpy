@@ -18,6 +18,12 @@
 npm i fast-cpy
 ```
 
+### cli
+
+```shell
+fast-cpy <src> <dest>
+```
+
 ### program
 
 ```ts

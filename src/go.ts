@@ -62,5 +62,7 @@ export function copyBin(
 ) {
 	const { binPath = detectDefaultBinPath() } = options
 
-	return execa(binPath, [src, dest])
+	return execa(binPath, [src, dest], {
+		reject: false
+	})
 }

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	cp.Copy(os.Args[0], os.Args[1])
+	cp.Copy(os.Args[1], os.Args[2])
 
 	fmt.Fprintln(os.Stdout, "")
 }

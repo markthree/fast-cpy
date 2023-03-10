@@ -3,11 +3,14 @@ package core
 import (
 	"fmt"
 	"io"
-	"io/fs"
 	"os"
 	"path"
 	"sync"
+
+	"github.com/panjf2000/ants"
 )
+
+var pool, _ = ants.NewPool(1000000)
 
 func Exists(path string) bool {
 	_, err := os.Stat(path)
@@ -61,7 +64,8 @@ func Copy(src, dest string) {
 	wg.Add(entrysLen)
 
 	for i := 0; i < entrysLen; i++ {
-		go func(entry fs.DirEntry) {
+		entry := entrys[i]
+		ants.Submit(func() {
 			defer wg.Done()
 
 			n := entry.Name()
@@ -108,7 +112,7 @@ func Copy(src, dest string) {
 
 				io.Copy(dstFile, srcFile)
 			}
-		}(entrys[i])
+		})
 	}
 
 	wg.Wait()

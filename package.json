@@ -29,6 +29,7 @@
     "build-types": "tsc",
     "build-go": "go build",
     "build-ts": "vite build",
+    "bench": "node bench.mjs",
     "prepublishOnly": "pnpm build",
     "release": "bumpp --push --tag --all && npm publish",
     "build-go-bin": "goreleaser release --snapshot --clean",

@@ -65,7 +65,7 @@ func Copy(src, dest string) {
 
 	for i := 0; i < entrysLen; i++ {
 		entry := entrys[i]
-		ants.Submit(func() {
+		pool.Submit(func() {
 			defer wg.Done()
 
 			n := entry.Name()

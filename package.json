@@ -31,6 +31,7 @@
     "build-ts": "vite build",
     "bench": "node bench.mjs",
     "prepublishOnly": "pnpm build",
+    "postinstall": "node scripts/post.mjs",
     "release": "bumpp --push --tag --all && npm publish",
     "build-go-bin": "goreleaser release --snapshot --clean",
     "build": "rimraf -rf npm && pnpm build-go-bin && run-p build-ts build-types"

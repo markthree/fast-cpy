@@ -9,7 +9,7 @@ async function setBinPermissions() {
   try {
     if (!isWindows) {
       const { detectDefaultBinPath } = await import(
-        "../npm/bin.mjs"
+        "../npm/go.mjs"
       );
       const binPath = detectDefaultBinPath();
       const binPathExists = existsSync(binPath);

@@ -10,7 +10,8 @@
   },
   "files": [
     "npm",
-    "dist"
+    "dist",
+    "scripts"
   ],
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 {
   "name": "fast-cpy",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Recursive concurrent copy, ultrafast",
   "main": "./npm/index.cjs",
   "module": "./npm/index.mjs",

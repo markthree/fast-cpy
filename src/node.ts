@@ -1,18 +1,9 @@
-import { lstat, mkdir, readdir, symlink } from "node:fs/promises";
-import { createReadStream, createWriteStream } from "node:fs";
 import { pipeline } from "node:stream";
-
-export async function exists(path: string) {
-  try {
-    await lstat(path);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
+import { lstat, mkdir, readdir, symlink } from "node:fs/promises";
+import { createReadStream, createWriteStream, existsSync } from "node:fs";
 
 export async function ensureDir(path: string) {
-  if (await exists(path)) {
+  if (existsSync(path)) {
     return;
   }
   await mkdir(path, {
@@ -21,7 +12,7 @@ export async function ensureDir(path: string) {
 }
 
 export async function copy(src: string, dest: string) {
-  if (!(await exists(src))) {
+  if (!existsSync(src)) {
     throw new Error(`src is not exists: ${src}`);
   }
 

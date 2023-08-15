@@ -1,13 +1,13 @@
-import { copyBin, copy } from './npm/index.mjs'
+import { copy, copyBin } from "./npm/index.mjs";
 
-console.time('copyBin')
+console.time("copyBin");
 
-await copyBin('dist', 'dest/copyBin')
+await copyBin("dist", "dest/copyBin");
 
-console.timeEnd('copyBin')
+console.timeEnd("copyBin");
 
-console.time('copy')
+console.time("copy");
 
-await copy('dist', 'dest/copy')
+await copy("dist", "dest/copy");
 
-console.timeEnd('copy')
+console.timeEnd("copy");

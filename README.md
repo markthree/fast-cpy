@@ -27,11 +27,11 @@ fast-cpy <src> <dest>
 ### program
 
 ```ts
-import { copy, copyBin } from 'fast-cpy'
+import { copy, copyBin } from "fast-cpy";
 
-await copy('src', 'dest') // Node native stream, supporting large files
+await copy("src", "dest"); // Node native stream, supporting large files
 
-await copyBin('src', 'dest') // Use go, suitable for multiple files
+await copyBin("src", "dest"); // Use go, suitable for multiple files
 ```
 
 <br />

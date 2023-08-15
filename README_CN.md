@@ -27,11 +27,11 @@ fast-cpy <src> <dest>
 ### program
 
 ```ts
-import { copy, copyBin } from 'fast-cpy'
+import { copy, copyBin } from "fast-cpy";
 
-await copy('src', 'dest') // node 原生流，支持大文件
+await copy("src", "dest"); // node 原生流，支持大文件
 
-await copyBin('src', 'dest') // 使用 go，适合并发多文件
+await copyBin("src", "dest"); // 使用 go，适合并发多文件
 ```
 
 <br />
